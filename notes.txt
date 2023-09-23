@@ -1,0 +1,65 @@
+Coding Environment
+-------------------
+
+> Text Editor => https://code.visualstudio.com/ (Install)
+> NodeJs => https://nodejs.org/en (Install)
+> GitBash =>  https://git-scm.com/downloads (Install)
+> GitHub Link => https://github.com/SangeethaShanmugm (follow)
+
+
+
+Configure your Git username/email
+------------------------------------
+>>Open the command line.
+>>Set your username: git config --global user.name "FIRST_NAME LAST_NAME"
+>>Set your email address: git config --global user.email "MY_NAME@example.com"
+
+Application
+------------
+
+Zomato App => 40% marks
+Porfolio Website => portfolio  => 5% marks
+
+Assignment => 15%
+task => 15%
+
+class performance => 20%
+
+Extension for vs code
+-------------------------
+
+> vscode-icons
+> spellcheck
+> Live-server
+> gitlens
+> githistory
+
+Frontend -1(website) => static website
+-----------------------------
+
+HTML => raw structure = static
+CSS => look & feel(design) => static
+Bootstrap - Framework
+Javascript => dynamic
+
+Frontend -2(webapps) => dynamic website
+-----------------------------
+React 
+
+Backend
+--------
+Nodejs
+Mongodb
+
+MERN Full Stack Developer
+MongoDB | Express | React | Nodejs
+
+
+MERN | MEAN | Python | Java
+
+
+Block Level
+-----------
+> Start with new line
+> Take whole width of screen
+> eg - div, p, h, section, hr, 
