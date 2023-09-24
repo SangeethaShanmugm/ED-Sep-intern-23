@@ -63,3 +63,28 @@ Block Level
 > Start with new line
 > Take whole width of screen
 > eg - div, p, h, section, hr, 
+
+Inline elements
+---------------
+> Start in the same line
+> Only take space which is required
+> Eg - span, img, a , audio, formatting tags
+
+CSS - Cascading style sheet
+----------------------------
+
+
+3 ways to define CSS
+
+1. inline  - style="background-color: dodgerblue; text-align: center; color: white"
+  >> style attribute inside html tags
+
+2.internal styling = <style></style>   => tag in <head> tag
+     <style>
+        p {
+            background-color: pink;
+        }
+    </style>
+
+3. external styling = <link> tag calling css file
+    <link rel="stylesheet" href="style.css" />
