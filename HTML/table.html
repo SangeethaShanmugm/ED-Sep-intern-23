@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        table {
+            width: 50%;
+        }
+
         table,
         th,
         td {
-            border: 1px solid black
+            border: 1px solid black;
+            border-collapse: collapse;
         }
     </style>
 </head>
@@ -17,19 +22,42 @@
 <body>
     <table>
         <tr>
-            <th>ID</th>
+            <th colspan="3">ID</th>
             <th>Email</th>
             <th>Name</th>
         </tr>
         <tr>
-            <td>1</td>
             <td>jack@gmail.com</td>
-            <td>Jack</td>
+            <td>john@gmail.com</td>
         </tr>
         <tr>
-            <td>2</td>
-            <td>john@gmail.com</td>
+            <td>Jack</td>
             <td>John</td>
+        </tr>
+    </table>
+
+    <br />
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Email</th>
+            <td>jack@gmail.com</td>
+            <td>john@gmail.com</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>jack</td>
+            <td>john</td>
+        </tr>
+        <tr>
+            <th>age</th>
+            <td>20</td>
+            <td>21</td>
         </tr>
     </table>
 </body>
