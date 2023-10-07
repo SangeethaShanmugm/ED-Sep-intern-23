@@ -95,3 +95,12 @@ BoxModel
 Display
 Position
 Selector
+
+
+display: none and visibility: hidden difference?
+--------------------------------------------------
+
+display: none  => will not occupy space
+visibility: hidden => will occupy space
+
+display: block & visibility: visible => text will be visible
