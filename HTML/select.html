@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .forecast h1,
+        .day-forecast {
+            margin: 0.5rem;
+            padding: 0.3rem;
+            font-size: 1.5rem;
+            background-color: lightgrey;
+        }
+
+        .day-forecast {
+            background-image: url(./rain1.png);
+            background-repeat: no-repeat;
+            background-color: pink;
+            background-size: 65px;
+            background-position: right;
+            background-origin: content-box, border-box;
+
+        }
+
+        .day-forecast>h2,
+        .day-forecast>p {
+            font-size: 1rem;
+            margin-left: 78px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <label for="pet-choose">Choose a pet:</label>
+
+    <select name="pets" id="pet-choose">
+        <option value="">--Please choose an option--</option>
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+        <option value="goldfish">GoldFish</option>
+        <optgroup label="Flying pets">
+            <option value="parrot">Parrot</option>
+            <option value="pigeon">Pigeon</option>
+        </optgroup>
+    </select>
+
+    <article>
+        <h2>Example of article</h2>
+        <article>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.</article>
+    </article>
+    <!-- weather report -->
+
+    <article class="forecast">
+        <h1>Weather forcast in Bangalore</h1>
+        <article class="day-forecast">
+            <h2>10 Oct 2023</h2>
+            <p>Rain.</p>
+        </article>
+        <article class="day-forecast">
+            <h2>11 Oct 2023</h2>
+            <p>Periods of Rain.</p>
+        </article>
+        <article class="day-forecast">
+            <h2>12 Oct 2023</h2>
+            <p>Heavy Rain.</p>
+        </article>
+    </article>
+
+</body>
+
+</html>
