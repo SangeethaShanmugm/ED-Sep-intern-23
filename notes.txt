@@ -104,3 +104,18 @@ display: none  => will not occupy space
 visibility: hidden => will occupy space
 
 display: block & visibility: visible => text will be visible
+
+
+
+Bootstrap
+----------
+
+>> Frontend Framework -> easy and faster
+>> Templates => button, forms, table, image carousels
+
+Advantages
+-----------
+>> Easy to use
+>> Responsive
+>> Mobile-first approach
+>> Browser Compatibility
