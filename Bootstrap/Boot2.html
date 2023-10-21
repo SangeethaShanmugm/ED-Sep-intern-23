@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/c4338603d0.js" crossorigin="anonymous"></script>
+    <style>
+        .slideImg {
+            width: 100%;
+            height: 300px !important;
+        }
+
+        .table {
+            background-color: pink;
+        }
+
+        .fa-brands {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Developer Funnel</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home </a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>Signup </a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="slideImg"
+                        src="https://img.freepik.com/premium-photo/relaxing-place-national-5a-scenic-spot-green-mountain-clean-green-freshwater-lake-natural-scenery_327903-961512.jpg"
+                        alt="scenary">
+                </div>
+                <div class="item">
+                    <img class="slideImg"
+                        src="https://thumbs.dreamstime.com/b/beautiful-autumn-scenery-park-beautiful-autumn-scenery-park-outdoor-photography-sunrise-light-101482086.jpg"
+                        alt="scenary">
+                </div>
+
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+
+            </a>
+        </div>
+
+        <hr />
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">Students</div>
+            <div class="panel-body">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Batch</th>
+                            <th>Name</th>
+                            <th>Skill</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sep Intern</td>
+                            <td>Abhijeet</td>
+                            <td>JS</td>
+                            <td>
+                                <button type="button" class="btn btn-success"><span
+                                        class="glyphicon glyphicon-edit"></span></button>
+                                <button type="button" class="btn btn-danger"><span
+                                        class="glyphicon glyphicon-trash"></span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sep Intern</td>
+                            <td>Abhishek</td>
+                            <td>HTML</td>
+                            <td>
+                                <button type="button" class="btn btn-success"><span
+                                        class="glyphicon glyphicon-edit"></span></button>
+                                <button type="button" class="btn btn-danger"><span
+                                        class="glyphicon glyphicon-trash"></span></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sep Intern</td>
+                            <td>Aditya</td>
+                            <td>CSS</td>
+                            <td>
+                                <button type="button" class="btn btn-success"><span
+                                        class="glyphicon glyphicon-edit"></span></button>
+                                <button type="button" class="btn btn-danger"><span
+                                        class="glyphicon glyphicon-trash"></span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr />
+
+
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-google"></i>
+
+    </div>
+
+</body>
+
+</html>
