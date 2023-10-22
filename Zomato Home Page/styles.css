@@ -1,0 +1,74 @@
+.hstack {
+  display: flex;
+}
+
+.back-img {
+  background-image: linear-gradient(180deg, #9d0e0e00 0%, #4f0707 100%),
+    url(./Image/main.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+}
+
+.login,
+.createacc {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.logo {
+  display: inline;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 70px;
+  font-weight: 600;
+  color: #eb2929;
+}
+
+.title {
+  color: #ffffff;
+  opacity: 1;
+  font: normal normal 600 36px/55px Poppins;
+  letter-spacing: 0px;
+}
+
+.datalist {
+  margin-left: 30%;
+}
+
+.heading > h2 {
+  color: #192f60;
+  opacity: 1;
+  font-weight: bolder;
+}
+
+.heading > p {
+  color: #8c96ab;
+  opacity: 1;
+}
+
+.mainCard {
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 395px;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.tileItem {
+  width: 200px;
+  height: 160px;
+}
+
+.tileheading {
+  font: normal normal 600 18px/27px Poppins;
+  letter-spacing: 0px;
+  color: #192f60;
+  opacity: 1;
+  margin-top: 15px;
+}
