@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
+  background-size: 100%;
 }
 
 .login,
