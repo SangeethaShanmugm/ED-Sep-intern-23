@@ -119,3 +119,12 @@ Advantages
 >> Responsive
 >> Mobile-first approach
 >> Browser Compatibility
+
+ECMA => European Computers Manufacturer Association
+
+Browser war => Netscape => Mozilla firefox
+
+Netscape || Internet Explorer(Microsoft)
+JS  => Brendon Eich
+Js version -> 1 - 15
+es5 => 2009 || es6 - 2015
