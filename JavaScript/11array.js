@@ -99,3 +99,18 @@ console.log(city.splice(1, 1, "Innsburg", "France"))//['Mumbai']
 console.log(city)//['Delhi', 'Innsburg', 'France', 'Amsterdam', 'Pune', 'Paris', 'Boston', 'Venice']
 
 
+var student = ["Jack", "John"]
+
+var name = "jack"
+
+console.log(Array.isArray(student))//true
+console.log(Array.isArray(name))//false
+
+var city = ["Dubai", "Innsburg", "France", ["Red", [1, 2, 3], "Yellow", "Orange"], "London", "Pune"]
+//                                                  0  1  2 
+//                                            0        1          2          3  
+//            0          1          2                           3                    4         5         
+
+console.log(city[3])//["Red", [1, 2, 3], "Yellow", "Orange"]
+
+console.log(city[3][1])//[ 1, 2, 3 ]
