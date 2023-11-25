@@ -62,7 +62,7 @@ console.log(typeof undefined)
 
 var a = null
 console.log(typeof a)
-
+ 
 
 var a = null
 var b = 20

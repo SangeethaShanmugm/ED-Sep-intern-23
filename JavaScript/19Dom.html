@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- DOM => Document Object Model => target html element using js -->
+    <h1>Hello, <span id="name">World!</span></h1>
+
+    <div id='example'>
+        InnerText Example<p>Updated<strong> Content</strong></p>
+    </div>
+
+    <div id='container'>
+        InnerHTML Example<p>Updated<strong> Content</strong></p>
+    </div>
+
+    <div class="sample">
+        Hello
+    </div>
+
+    <script>
+        let exampleElement = document.getElementById("example")
+        console.log(exampleElement.innerText)
+
+
+        let container = document.getElementById("container")
+        console.log(container.innerText)
+        console.log(container.innerHTML)
+        // container.innerHTML = '<p>Updated<strong> Content</strong></p>'
+        // console.log(container.innerHTML)
+
+
+
+        let sample = document.getElementsByClassName("sample")
+        console.log(sample[0].style.color = "red")
+
+        // let nameSpan = document.getElementById("name")
+        // nameSpan.textContent = "Earth"
+
+        // //create a new para
+        // let newPara = document.createElement('p')
+        // newPara.textContent = "Hello Everyone"
+
+        // document.body.appendChild(newPara)
+
+
+
+
+    </script>
+</body>
+
+</html>

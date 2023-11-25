@@ -9,7 +9,7 @@ let c = [true, false, false, true]//Array fo Boolean
 
 let d = ["Hii", 50, true, 43, "hey", "text"]
 
-var e = [3, 5, 7, 9]
+var e = [3, 5, 7, 9]    
 console.log(typeof e) //object
 
 
