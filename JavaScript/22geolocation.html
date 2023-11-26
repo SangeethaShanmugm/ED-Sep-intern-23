@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onClick="geolocation()">Geolocation</button>
+    <p id="out"></p>
+    <p id="location"></p>
+    <p id="weather"></p>
+
+
+
+    <script>
+        let x = document.getElementById("out")
+        let y = document.getElementById("location")
+        let z = document.getElementById("weather")
+        let a = document.getElementById("country")
+        let b = document.getElementById("img")
+
+        console.log(a, b)
+        function geolocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition)//callback function
+            } else {
+                x.innerText = "Geo is Not Supported"
+            }
+
+        }
+
+
+
+        function showPosition(data) {
+            console.log(data.coords.latitude)
+            console.log(data.coords.longitude)
+            let lat = data.coords.latitude
+            let long = data.coords.longitude
+            x.innerText = `Lat is ${lat} and long is ${long}`
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=9ae271f72ce5677f1897de2c25eb5998`
+            //api calling
+            fetch(url, { method: "GET" })
+                //return promise
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data)
+                    y.innerText = `City name is ${data.name}`;
+                    z.innerText = `Temp of the day is ${data.main.temp} °C & there can be ${data.weather[0].description}`
+                }
+                )
+
+
+            function createCountries(restCountry) {
+                document.body.innerHTML = `<div>
+                    <p id="country"></p>
+                    <img id="img" src=${restCountry.flags.png} />
+                    </div>`
+            }
+
+            //rest countries
+
+            fetch("https://restcountries.com/v3.1/all")
+                .then((res) => res.json())
+                .then((data) => {
+                    data.map((restCountry) => {
+                        console.log(restCountry.name.common, "population =>", restCountry.population)
+                        a.innerText = `Country name is ${restCountry.name.common} & its population is ${restCountry.population}`
+                        b.innerText = `Country flag is ${restCountry.flags.png}`
+                        console.log(restCountry.flags.png)
+                        createCountries(restCountry)
+                    })
+
+                })
+
+        }
+    </script>
+</body>
+
+</html>
