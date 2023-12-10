@@ -128,3 +128,35 @@ Netscape || Internet Explorer(Microsoft)
 JS  => Brendon Eich
 Js version -> 1 - 15
 es5 => 2009 || es6 - 2015
+
+
+
+package.json
+--------------
+
+>> starting point for our app
+>> It contains all the package required for our app
+>> It also contains script to run our app
+>> Meta data (description about out app)
+
+steps to generate package.json
+------------------------------
+
+>> Nodejs must be installed => start => cmd => node -v=> to check node version
+>> Go inside any folder where you to have node app/ go inside folder using cmd
+>> npm init => initialization
+>> Answer all the question => just click enter
+>> Type "Yes"
+
+
+
+
+http methods       meaning
+GET              -> READ
+POST             -> ADDING/INSERT
+PUT              -> UPDATE
+DELETE           -> DELETE
+
+crud - create, read, update, delete
+
+
