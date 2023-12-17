@@ -100,8 +100,44 @@ app.get('/filter/:mealId', (req, res) => {
 
 })
 
+//details
 
+app.get('/details/:id', (req, res) => {
+    let id = +req.params.id
 
+    db.collection("restaurants").find({ restaurant_id: id }).toArray((err, result) => {
+        if (err) throw err;
+        res.send(result)
+    })
+
+})
+
+//menu of restaurant
+
+app.get('/menu/:id', (req, res) => {
+    let id = +req.params.id
+
+    db.collection("menu").find({ restaurant_id: id }).toArray((err, result) => {
+        if (err) throw err;
+        res.send(result)
+    })
+
+})
+
+//Menu Details
+
+// express.json() => Inbuilt middleware
+app.post('/menuItem', express.json(), (req, res) => {
+    if (Array.isArray(req.body)) {
+        db.collection("menu").find({ menu_id: { $in: req.body } })
+            .toArray((err, result) => {
+                if (err) throw err;
+                res.send(result)
+            })
+    } else {
+        res.send("Invalid Input")
+    }
+})
 
 
 
