@@ -4,6 +4,8 @@ const MongoClient = mongo.MongoClient;
 const PORT = 4000
 
 const app = express()
+
+app.use(express.json())//Inbuilt Middleware
 const MONGO_URL = 'mongodb://127.0.0.1:27017';
 // 'mongodb://localhost:27017';
 let db;
@@ -127,7 +129,7 @@ app.get('/menu/:id', (req, res) => {
 //Menu Details
 
 // express.json() => Inbuilt middleware
-app.post('/menuItem', express.json(), (req, res) => {
+app.post('/menuItem', (req, res) => {
     if (Array.isArray(req.body)) {
         db.collection("menu").find({ menu_id: { $in: req.body } })
             .toArray((err, result) => {
@@ -138,6 +140,61 @@ app.post('/menuItem', express.json(), (req, res) => {
         res.send("Invalid Input")
     }
 })
+
+
+//placeorder
+app.post('/placeOrder', (req, res) => {
+    console.log(req.body)
+
+    db.collection("orders").insertOne(req.body, (err, result) => {
+        if (err) throw err;
+        res.send("Order Placed")
+    })
+})
+
+//getOrders
+
+app.get('/orders', (req, res) => {
+    let query = {}
+    let email = req.query.email
+    if (email) {
+        query = { email }
+    }
+    db.collection("orders").find(query).toArray((err, result) => {
+        res.send(result)
+    })
+})
+
+
+//delete order
+
+app.delete('/deleteOrder/:id', (req, res) => {
+    let oid = +req.params.id
+    db.collection("orders").deleteOne({ orderId: oid }, (err, result) => {
+        if (err) throw err;
+        res.send("Order deleted successfully")
+    })
+})
+
+//update payment details
+
+
+app.put('/updateOrder/:id', (req, res) => {
+    let oid = +req.params.id
+    db.collection("orders").updateOne({ orderId: oid },
+        {
+            $set: {
+                status: req.body.status,
+                bank_name: req.body.bank_name,
+                date: req.body.date,
+            }
+        },
+        (err, result) => {
+            if (err) throw err;
+            res.send("Order updated successfully")
+        })
+})
+
 
 
 

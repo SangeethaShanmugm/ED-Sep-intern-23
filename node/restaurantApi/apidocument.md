@@ -65,3 +65,37 @@ http://localhost:4000/menuItem
 input => [1,2,3]
 
 PlaceOrder (POST)
+
+{
+
+        "orderId": 1,
+        "name": "peter",
+        "email": "peter@gmail.com",
+        "address": "Home 5",
+        "phone": 7435434155,
+        "cost": 577,
+        "restName": "Domino's Pizza",
+        "menuItem": [1,2,3]
+    }
+
+## Page 5
+
+List of orders
+
+http://localhost:4000/orders
+
+order wrt email
+
+http://localhost:4000/orders?email=peter@gmail.com
+
+delete order wrt id
+
+http://localhost:4000/deleteOrder/1
+
+update payment details (PUT)
+
+{
+"status":"Delivered",
+"bank_name":"HDFC",
+"date":"12-23-23"
+}
