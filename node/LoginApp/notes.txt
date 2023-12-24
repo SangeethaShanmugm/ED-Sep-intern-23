@@ -1,0 +1,18 @@
+same input same hash value
+Abhay     => password@123   -  hash  - 63475645645
+Dipali    => password@123   -  hash  - 63475645645
+
+
+Ibrahima  => password@123 + dnkjahiehdkfn (random string)    -  hash  -  46283756374
+Abhay     => password@123 + hakfjhsdjfhdsjdf                 -  hash  -  56456767645
+Dipali    => password@123 + dsafdfsgvc                      -  hash  -   63475645645 
+
+salting (random string)
+1. fhdsjfkdsfjj     - 2 round 
+2. dsakfkdsfshijgijrejgndklfhiewjfkf - 10 round
+3. josDNJBOUFDSHNBAUDvoidshgnfvljcirjgsirejnriganreijgnrn   - 100 rounds
+
+1. 2s - Too short and it can be repeated
+2. 8s - Balance security & User experience
+3. 4 min - ❌
+ Math.random()
