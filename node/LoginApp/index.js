@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = 8000
 const db = require("./db")
-
+app.use(express.json())
 const AuthController = require("./controller/authController")
 
 
