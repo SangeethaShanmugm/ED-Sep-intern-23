@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+}
+
+.card {
+  width: 25%;
+  height: 300px;
+  box-shadow: 5px 10px 15px gray;
+  padding: 10px;
+}
+
+.card > img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.product-data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}

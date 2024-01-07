@@ -1,0 +1,62 @@
+React => library of JS
+
+JS => framework => angular, nextjs, vue JS
+
+react was developed by  => fb  => Jordan
+
+Types
+======
+1. class comcomponent
+>> Logical component
+>> Logics like calling api, display, complex Logics
+>> we can maintain the state
+
+
+2. function component
+>> Dumb component 
+>> display is the only purpose
+>> we cannot maintain state
+
+react => main package
+react-dom => help us to display the content in browser
+react-scripts => help us to run app
+
+
+JSX => Javascript XML => new syntax
+
+class => reserved keyword
+
+{} => template syntax
+
+custom component
+---------------
+ 1. First letter of component shuld be capital letter
+ 2. Should return JSX
+
+ function Welcome(){
+    return (
+        <></> //empty fragment
+    )
+ }
+
+ 
+ function Welcome(){
+    return (
+        <>
+        <h1>Hello Dheeraj</h1> 
+         <h1>Hello Havila</h1> 
+         </>
+    )
+ }
+
+//passing props
+ 
+function Welcome(props) {
+  return (
+    <div>
+      <h1> Hello {props.nm}</h1>
+      <h5> Welcome </h5>
+    </div>
+  )
+}
+
