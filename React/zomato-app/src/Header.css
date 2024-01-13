@@ -1,0 +1,24 @@
+#brand {
+  float: left;
+  font-size: 30px;
+}
+
+.hstack {
+  display: flex;
+}
+
+.back-img {
+  background-image: linear-gradient(180deg, #9d0e0e00 0%, #4f0707 100%),
+    url(../../../Image/main.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  background-size: 100%;
+}
+
+.login,
+.createacc {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}

@@ -1,0 +1,19 @@
+.logo {
+  display: inline;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 70px;
+  font-weight: 600;
+  color: #eb2929;
+}
+
+.title {
+  color: #ffffff;
+  opacity: 1;
+  font: normal normal 600 36px/55px Poppins;
+  letter-spacing: 0px;
+}
+
+.datalist {
+  margin-left: 30%;
+}

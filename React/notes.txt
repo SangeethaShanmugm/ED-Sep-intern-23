@@ -60,3 +60,18 @@ function Welcome(props) {
   )
 }
 
+
+class component
+----------------
+phases
+--------
+1. initilization  => component is created
+2. mounting  => "Jockey mounted on the horse" => where does component gets inserted => tree => DOM
+3. updating => props & state get changed
+4. unmounting =>component removed from the DOM
+
+lifecycle methods
+-------------------
+
+mounting => componentWillMount, componentDidMount
+unmounting => componentWillUnmount ✅, componentDidUnmount ❌
