@@ -15,26 +15,44 @@ export default class Search extends Component {
     }
 
 
-    handleCity = (event) => {
-        console.log("handleCity")
-        const stateId = event.target.value
-        console.log(stateId)
-    }
+
 
     renderCity = (data) => {
         console.log(data)
         if (data) {
             return data.map((item) => {
                 return (
-                    <option>{item.state}</option>
+                    <option key={item._id} value={item.state_id}>{item.state}</option>
                 )
             })
         }
     }
 
-    renderRest = () => {
-
+    renderRest = (data) => {
+        console.log(data)
+        if (data) {
+            return data.map((item) => {
+                return (
+                    <option key={item._id} value={item.restaurant_id}>{item.restaurant_name}</option>
+                )
+            })
+        }
     }
+
+
+    handleCity = (event) => {
+
+        const state_Id = event.target.value
+        console.log(state_Id)
+        fetch(`${rurl}${state_Id}`, { method: "GET" })
+            .then((res) => res.json())
+            .then((data) => {
+                this.setState({ restaurants: data })
+                console.log(data)
+            }
+            )
+    }
+
     render() {
         return (
             <div>
@@ -51,19 +69,15 @@ export default class Search extends Component {
                 </div>
 
 
-                <div class="row text-center datalist">
-                    <div class="col-sm-4">
-                        <input class="form-control" id="exampleDataList"
-                            placeholder="Please type a location" />
+                <div className="row text-center datalist">
+                    <div className="col-sm-4">
                         <select onChange={this.handleCity}>
                             <option>----SELECT CITY---</option>
                             {this.renderCity(this.state.locations)}
                         </select>
                     </div>
-                    <div class="col-sm-5">
-                        <input class="form-control" placeholder="Search for restaurants" />
+                    <div className="col-sm-5">
                         <select>
-                            <option>search restaurants</option>
                             <option>----SELECT RESTAURANTS---</option>
                             {this.renderRest(this.state.restaurants)}
                         </select>

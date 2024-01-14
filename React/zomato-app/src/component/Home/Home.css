@@ -1,0 +1,8 @@
+.back-img {
+  background-image: linear-gradient(180deg, #9d0e0e00 0%, #4f0707 100%),
+    url(../../../../../Image//main.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+  background-size: 100%;
+}
