@@ -15,6 +15,9 @@ export default class ListingApi extends Component {
     }
 
   }
+  setDataFilter = (data) => {
+    this.setState({ restaurantList: data })
+  }
 
   render() {
     return (
@@ -24,8 +27,15 @@ export default class ListingApi extends Component {
           <div id="mainListing">
             <div id="filter">
               <center>Filter</center>
-              <CuisineFilter />
-              <CostFilter />
+              <CuisineFilter mealId={this.props.match.params.mealId}
+                restPerCuisine={(data) => {
+                  this.setDataFilter(data)
+                }} />
+              <CostFilter mealId={this.props.match.params.mealId}
+                restPerCost={(data) => {
+                  this.setDataFilter(data)
+                }}
+              />
             </div>
           </div>
           <ListingDisplay listData={this.state.restaurantList} />
