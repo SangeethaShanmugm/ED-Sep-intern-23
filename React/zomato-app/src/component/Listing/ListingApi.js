@@ -47,6 +47,7 @@ export default class ListingApi extends Component {
   componentDidMount() {
     let mealId = this.props.match.params.mealId
     console.log(mealId)
+    sessionStorage.setItem("mealId", mealId)
     fetch(`${murl}${mealId}`, { method: "GET" })
       .then((res) => res.json())
       .then((data) => {

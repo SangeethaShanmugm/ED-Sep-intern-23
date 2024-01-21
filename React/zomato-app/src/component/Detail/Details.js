@@ -4,6 +4,7 @@ import Header from '../../Header'
 import "./Details.css"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Link } from "react-router-dom"
+import MenuList from './MenuList';
 
 const url = "http://localhost:4000"
 export default class Details extends Component {
@@ -12,8 +13,51 @@ export default class Details extends Component {
         super()
         this.state = {
             details: "",
+            menuList: "",
+            userItem: "",
+            mealId: sessionStorage.getItem("mealId"),
+            totalPrice: "",
         }
     }
+
+    addToCart = (data) => {
+        this.setState({ userItem: data })
+        console.log(this.state.userItem)
+        let menuId = sessionStorage.getItem("menu")
+        let orderId = []
+        console.log(menuId)
+        let result = menuId.split(",").map((item) => {
+            orderId.push(parseInt(item))
+            return "ok"
+        })
+        console.log(result)
+        fetch(`${url}/menuItem`, {
+            method: "POST",
+            body: JSON.stringify(orderId),
+            headers: {
+                accept: "application/json",
+                "Content-Type": "application/json"
+            }
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log("MenuData", data)
+                let totalPrice = 0;
+                data.map((item) => {
+                    totalPrice = totalPrice + parseFloat(item.menu_price)
+                    return "success"
+                })
+                console.log(totalPrice)
+                totalPrice = sessionStorage.setItem("totalPrice", totalPrice)
+            })
+
+    }
+
+    proceed = () => {
+        sessionStorage.setItem("menu", this.state.userItem)
+        this.props.history.push(`/placeOrder/${this.state.details.restaurant_name}`)
+    }
+
     render() {
         let { details } = this.state;
         return (
@@ -81,12 +125,12 @@ export default class Details extends Component {
                             </button>
                         </div>
                         <div>
-                            {/* <MenuList
+                            <MenuList
                                 menuData={this.state.menuList}
                                 finalOrder={(data) => {
                                     this.addToCart(data);
                                 }}
-                            /> */}
+                            />
                         </div>
                     </div>
                 </div>
@@ -101,6 +145,8 @@ export default class Details extends Component {
         console.log(restId)
         let response = await axios.get(`${url}/details/${restId}`, { method: "GET" })
         console.log(response.data[0])
-        this.setState({ details: response.data[0] })
+        let menuData = await axios.get(`${url}/menu/${restId}`, { method: "GET" })
+        console.log(menuData.data)
+        this.setState({ details: response.data[0], menuList: menuData.data })
     }
 }
