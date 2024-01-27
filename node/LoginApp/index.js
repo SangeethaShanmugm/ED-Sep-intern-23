@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
+var cors = require('cors')
 const PORT = 8000
 const db = require("./db")
+
 app.use(express.json())
+app.use(cors())
+
 const AuthController = require("./controller/authController")
 
 

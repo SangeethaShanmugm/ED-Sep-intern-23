@@ -26,11 +26,18 @@ export default class Details extends Component {
         let menuId = sessionStorage.getItem("menu")
         let orderId = []
         console.log(menuId)
-        let result = menuId.split(",").map((item) => {
-            orderId.push(parseInt(item))
-            return "ok"
-        })
-        console.log(result)
+        let result;
+        if (menuId) {
+            result = menuId.split(",").map((item) => {
+                orderId.push(parseInt(item))
+                return "ok"
+                console.log(result)
+            })
+        } else {
+            result = ["error"]
+        }
+
+
         fetch(`${url}/menuItem`, {
             method: "POST",
             body: JSON.stringify(orderId),
@@ -120,7 +127,7 @@ export default class Details extends Component {
                             >
                                 BACK
                             </Link> */}
-                            <button className="btn btn-success" onClick={this.proceed}>
+                            <button className="btn btn-success" style={{ fontSize: "20px" }} onClick={this.proceed}>
                                 PROCEED
                             </button>
                         </div>

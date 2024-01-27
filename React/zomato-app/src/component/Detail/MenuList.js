@@ -72,7 +72,7 @@ export default class MenuList extends Component {
     render() {
         return (
             <div>
-                <div className="col-md-12 bg-success">
+                <div className="col-md-12">
                     <h2>Item Added</h2>
                     <h4>Item Number Added =
                         {this.renderCart(this.orderId)}

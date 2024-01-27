@@ -66,6 +66,8 @@ input => [1,2,3]
 
 PlaceOrder (POST)
 
+http://localhost:4000/placeOrder
+
 {
 
         "orderId": 1,

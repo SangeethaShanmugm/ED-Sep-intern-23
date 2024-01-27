@@ -46,6 +46,13 @@ export const ListingDisplay = (props) => {
                     )
                 })
             }
+        } else {
+            return (
+                <div>
+                    <img src="https://www.icegif.com/wp-content/uploads/2023/07/icegif-1262.gif" alt="loading" />
+                    <h1>Loading...</h1>
+                </div>
+            )
         }
     }
 
